@@ -1,0 +1,36 @@
+const mongoose = require('mongoose');
+
+const ZerodhaPositionSchema = new mongoose.Schema({
+  account_userid: { type: String, required: true },
+  tradingsymbol: { type: String, required: true },
+  exchange: { type: String, required: true },
+  instrument_token: { type: Number, required: true },
+  product: { type: String, required: true },
+  quantity: { type: Number, required: true },
+  overnight_quantity: { type: Number, required: true },
+  multiplier: { type: Number, required: true },
+  average_price: { type: Number, required: true },
+  close_price: { type: Number, required: true },
+  last_price: { type: Number, required: true },
+  value: { type: Number, required: true },
+  pnl: { type: Number, required: true },
+  m2m: { type: Number, required: true },
+  unrealised: { type: Number, required: true },
+  realised: { type: Number, required: true },
+  buy_quantity: { type: Number, required: true },
+  buy_price: { type: Number, required: true },
+  buy_value: { type: Number, required: true },
+  buy_m2m: { type: Number, required: true },
+  sell_quantity: { type: Number, required: true },
+  sell_price: { type: Number, required: true },
+  sell_value: { type: Number, required: true },
+  sell_m2m: { type: Number, required: true },
+  day_buy_quantity: { type: Number, required: true },
+  day_buy_price: { type: Number, required: true },
+  day_buy_value: { type: Number, required: true },
+  day_sell_quantity: { type: Number, required: true },
+  day_sell_price: { type: Number, required: true },
+  day_sell_value: { type: Number, required: true },
+});
+
+module.exports = mongoose.model('ZerodhaPosition', ZerodhaPositionSchema);
